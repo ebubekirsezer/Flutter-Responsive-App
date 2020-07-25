@@ -15,14 +15,37 @@ class _HomeViewState extends State<HomeView> {
       appBar: AppBar(
         title: Text("data"),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: pageHeight * 0.5,
-            color: Colors.blue,
-          ),
-        ],
-      ),
+      body: buildColumnWithMediaQueries(),
+    );
+  }
+
+  Column buildColumnWithMediaQueries() {
+    return Column(
+      children: [
+        Container(
+          height: pageHeight * 0.3,
+          color: Colors.blue,
+        ),
+        Container(
+          height: pageHeight * 0.2,
+          color: Colors.yellow,
+        ),
+        Container(
+          height: pageHeight * 0.1,
+          width: pageWidth * 0.7,
+          color: Colors.red,
+        ),
+        Container(
+          height: pageHeight * 0.1,
+          width: pageWidth * 0.5,
+          color: Colors.purple,
+        ),
+        Container(
+          height: pageHeight * 0.1,
+          width: pageWidth * 0.3,
+          color: Colors.orange,
+        ),
+      ],
     );
   }
 }
